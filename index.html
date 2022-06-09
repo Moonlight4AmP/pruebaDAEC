@@ -1,0 +1,55 @@
+<!--Moonligth-->
+<!--Grupo: 4AMPR-->
+<!-- 12/04/22-->
+<!--Objetivo: Un programa donde se realice una página para recomendar libros-->
+<!--Pagina reaizada por:Rechel María Medina Gutiérrez-->
+<!DOCTYPE html>
+<html>
+<head>
+      	<audio src="Harry-Potter-Theme.mp3" loop="3"  autoplay="true "> </audio>
+      	<meta charset="utf-8">
+         <title>Moonlight</title>
+
+          <script type="text/javascript">
+	    		//Función que se llama a través del botón.
+	    		function obten()
+	   		 {
+	    			//se obtienen los datos atraves de getElementById
+	    		var Nm=document.getElementById("Name").value;
+	   		 	var Nn=document.getElementById("Nickname").value;
+       			var Fb=document.getElementById("Favoritebook").value;
+	    			var genre=document.getElementById("Favoritegenre").value;
+
+	    			alert("Welcome, "+Nm+" ("+Nn+") \n"+"Please enjoy!");
+		 		}
+		 
+		 </script>
+</head>
+
+<body text=white background="https://i.pinimg.com/564x/21/76/dc/2176dc21508711f5bc405e3f4781880b.jpg" bgcolor="pink">
+    <center><font face=Scribble  size=9><p>WELCOME TO MOONLIGHT</p></center>
+    <hr>
+   
+    <center>
+    	<p>Please, fill this formulary...</p>
+    			</center>
+
+   
+		 <form id="info">
+			<label>Name:</label>
+			<input type="text" id="Name" placeholder="Insert your name">
+		<br>
+			<label>Nickname:</label>
+			<input type="text" id="Nickname" placeholder="Insert your nickname">
+		<br>
+			<label>Favorite book:</label>
+			<input type="text" id="Favoritebook" placeholder="Insert your favorite book">
+		<br>
+			<label>Favorite Genre:</label>
+			<input type="text" id="Favoritegenre" placeholder="Insert your favorite genre">
+		 </form>
+		<br>
+		
+			<a href="recomendaciones_4AmP.html">
+			<button onclick="obten()" style="width:150px;height:60px;border-radius: 10px;">Book recomendations</button></a>
+</html>

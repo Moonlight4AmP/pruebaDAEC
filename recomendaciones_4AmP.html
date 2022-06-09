@@ -1,0 +1,72 @@
+<!--Moonligth-->
+<!--Ángel Patricia Tamayo Rojo-->
+<!--Grupo: 4AMPR-->
+<!-- 02/05/22-->
+<!--Objetivo: Un programa donde se realice una página para recomendar libros-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <!--Para insertar audio de fondo-->
+  <audio src="Harry-Potter-Theme.mp3" loop="3"  autoplay="true "> </audio>
+	<title> Moonlight | Recommendations </title>
+  <center>
+  <script type="text/javascript">
+
+    //Para mostrar la fecha en hora
+
+      function mostrar_fecha()
+    {
+      var cl=document.getElementById("fecha");
+      cl.innerHTML = new Date();
+    }
+
+
+    mostrar_fecha();
+      setInterval(mostrar_fecha, 1000);
+
+      function warning()
+      {
+        var conf=confirm("The page you want to open contains some sensitive content. Would you like to continue?")
+        return conf;
+      }
+  </script>
+</head>
+  <body background="https://yesofcorsa.com/wp-content/uploads/2017/11/Read-A-Book-Wallpaper-HQ.jpg">
+    <style type="text/css">
+      body
+      {
+        font-family: Arial;
+        color: white;
+      }
+    </style>
+    <div id="fecha"></div>
+   
+</p>
+  <center>
+    <font face=Courier-New color=#080A4F size=8><p>RECOMMENDATIONS</p>
+      <font face=Arial-Narrow color=white size=3><p>Select the genre you are interested in.</p>
+  
+  <a href="Fantasy_4AmP.html"> 
+    <input type="button" value="Fantasy" style="background: #7C9BEB; width:150px;height:70px;border-color: white ;border-radius: 10px;"> </a>
+    <br>
+    <br>
+  <a href="Romance_4AmP.html">
+    <input type="button" value="Romance" style="background: #7C9BEB; width:150px;height:70px;border-color: white ;border-radius: 10px;"></a>
+    <br>
+    <br>
+  <a href="thriller_4AmP.html"> 
+    <input type="button" onclick="return warning()" value="Thriller" style="background:#7C9BEB; width:150px;height:70px;border-color: white ; border-radius: 10px;"></a>
+    <br>
+    <br>
+  <a href="fiction_4AmP.html">
+    <input type="button" value="Fiction" style="background: #7C9BEB; width:150px;height:70px;border-color: white ; border-radius: 10px;"></a>
+  </center>
+
+<p align="left">
+<a href="questionnaire_4AmP.html">
+  <input type="button" value="Take this quiz if you already know some of the recommended books" style="background: white; width:460px;height:40px;border-color: white "></a>
+</p>
+
+</body>
+</html>

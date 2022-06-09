@@ -1,0 +1,174 @@
+<!--Ángel Patricia Tamayo Rojo-->
+<!--Grupo: 4AMPR-->
+<!-- 05/05/22-->
+<!--Objetivo: Un programa donde se realice una página para recomendar libros-->
+<!DOCTYPE html>
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<style>
+			p{
+				color: #DBDBDD;
+				font-size: 20px;
+				line-height: 30px;
+				font-family: Calibre;
+			}
+			input{
+				text: bold;
+				border: 0px;
+				color: black ;
+				border-radius: 10px;
+				background-color: #E5E5FF;
+				font-size: 20px;
+				line-height: 30px;
+				font-family: Calibre;
+			}
+			button{
+				background-color: E5E5FF;
+				border: 3px;
+				border-radius: 5px;
+				font-size: 20px;
+				line-height: 30px;
+				font-family: Calibre;
+			}
+		</style>
+		<meta charset="utf-8">
+		<title>Moonlight | Questionnaire</title>
+		<h1 align="center"><font face=Scribble  size=20 color="white"> How much do you know about the books you read?</h1>
+	</head>
+	<body background="fondo_cuest.png">
+
+<script type="text/javascript">
+
+			//Pregunta 1 por campos de texto.
+			function val1(){
+				//Toma por medio del id el valor de "carta" y lo asigna a una variable.
+				var p1=document.getElementById("carta").value;
+				//En caso de que el valor de la variable sea el indicado, escribirá "Correcto", en cualquier otro caso dirá "Incorrecto".
+				if(p1=="Hagrid"){
+					document.getElementById("r1").innerHTML="Correcto";
+					document.getElementById('r1').style.color="green";
+				}
+				else{
+					document.getElementById("r1").innerHTML="Incorrecto";
+					document.getElementById('r1').style.color="red";
+				}
+			}
+
+			//Pregunta 2 por Checkbox
+			function val2(){
+				//Evalua cada checkbox por separado usando su id, si el valor de este checkbox es "false" se le asignará a una variable el valor de 10, en otro caso el valor asignado será 1.
+				if (document.getElementById('madriguera').checked==false){
+					var n1=10
+				}
+				else{
+					var n1=1
+				}
+				//Evalua cada checkbox por separado usando su id, si el valor de este checkbox es "true", se le asignará a una variable el valor de 10, en otro caso el valor asignado será 1.
+				if(document.getElementById("grimmauld").checked==false){
+				var n2=10
+				}
+				else{
+					var n2=1
+				}
+				//Evalua cada checkbox por separado, si el valor de este checkbox es "true" se le asignará a una variable el valor de 10, en otro caso el valor asignado será 1.	
+				if(document.getElementById("privet").checked==true){
+					var n3=10
+				}
+				else{
+					var n3=1
+				}
+				//Algunos checkbox necesitan ser "true" ya que estas son las respuestas correctas.
+				//Se le asigna una variable el valor de la suma de las anteriores 3 variables.
+				var nTotal=n1+n2+n3
+					//Si el valor de la variable es 30, será porqué las checkbox fueron respondidas correctamente y se escribirá "Correcto", en caso de no responder bien las checkbox, la suma de las variables no llegará a 30, por lo que se escribirá "Incorrecto".
+					if (nTotal==30) {
+						document.getElementById('r2').innerHTML="Correcto";
+						document.getElementById("r2").style.color="green";
+					}
+					else{
+						document.getElementById('r2').innerHTML="Incorrecto";
+						document.getElementById("r2").style.color="red";
+					}
+			}
+
+			//Pregunta 3 por botones radio.
+			function val3(){
+				//Evalua por medio del id si el valor es true, en caso de ser así, escribirá en el div "Correcto", en cualquier otro caso, escribirá "Incorrecto". Así será con las siguientes 3 preguntas.
+				if (document.getElementById('revNO').checked==true){
+					document.getElementById('r3').innerHTML="Correcto";
+					document.getElementById('r3').style.color="green";
+				}
+				else{
+					document.getElementById('r3').innerHTML="Incorrecto";
+					document.getElementById("r3").style.color="red";
+				}
+			}
+
+			//Pregunta 4 por botones radio.
+			function val4(){
+				if (document.getElementById('saúco').checked==true){
+					document.getElementById('r4').innerHTML="Correcto";
+					document.getElementById('r4').style.color="green";
+				}
+				else{
+					document.getElementById('r4').innerHTML="Incorrecto";
+					document.getElementById('r4').style.color="red";
+				}
+			}
+
+			//Pregunta 5 por botones radio.
+			function val5(){
+				if (document.getElementById('merodeador').checked==true){
+					document.getElementById('r5').innerHTML="Correcto";
+					document.getElementById('r5').style.color="green";
+				}
+				else{
+					document.getElementById('r5').innerHTML="Incorrecto";
+					document.getElementById('r5').style.color="red";
+				}
+			}
+		</script>
+		<div class="main">
+			
+			<p>(Se empieza con mayusculas)<br><b>Pregunta 1:En la película ¿quién entrega a Harry su carta de aceptación de Hogwarts?<br></b>
+
+				<input type="text" id="carta" placeholder="Escriba su respuesta">
+				<button onclick="val1()">Validar Respuesta</button><br></p>
+				<b><div id="r1"></div></b>
+
+			<p><b>Pregunta 2:¿Dónde vive Harry Potter con su familia?</b><br>
+				
+				<input type="checkbox" id="privet">En el número 4 de Privet Drive<br>
+				<input type="checkbox" id="grimmauld">En Grimmauld Place<br>
+				<input type="checkbox" id="madriguera">En la madriguera<br></p>
+				<b><div id=r2></div></b>
+				<button onclick="val2()">Validar Respuesta</button>
+
+			<p><b><br>Pregunta 3:¿Es verdad que el hechizo que se usa contra los dementores es el Petrificus Totalus?</b><br>
+				
+				<input type="radio" name="dementores" id="revSI">Si<br>
+				<input type="radio" name="dementores" id="revNO">No<br></p>
+				<b><div id=r3></div></b>
+				<button onclick="val3()">Validar Respuesta</button>
+
+			<p><b>Pregunta 4:¿Qué tiene de especial la varita de saúco?</b><br>
+				
+				<input type="radio" name="saúco" id="saúco1">Es la varita de Hermione<br>
+				<input type="radio" name="saúco" id="saúco">Es la varita más poderosa que ha existido y puede reparar otras varitas<br>
+				<input type="radio" name="saúco" id="saúco2">Es una varita embrujada<br>
+				<b><div id=r4></div></b>
+				<button onclick="val4()">Validar Respuesta</button>
+
+			<p><b>Pregunta 5:¿Cómo se puede ver el mapa del merodeador?</b><br>
+				
+				<input type="radio" name="merodeador" id="merodeador2">
+Para ver el mapa hay que darle un toque con una varita y decir “Juro solemnemente que mis intenciones son buenas<br>
+				<input type="radio" name="merodeador" id="merodeador1">Para ver el mapa hay que darle un toque con una varita y decir “Ábrete, sésamo"<br>
+				<input type="radio" name="merodeador" id="merodeador">Para ver el mapa hay que darle un toque con una varita y decir “Juro solemnemente que mis intenciones no son buenas<br>
+				<b><div id=r5></div></b>
+				
+				<button onclick="val5()">Validar Respuesta</button>
+			</div>
+		</body>
+	</html>
